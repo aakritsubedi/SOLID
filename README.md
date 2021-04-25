@@ -29,3 +29,7 @@ SOLID stands for:
   - Benefits in long run 
   - Related to Single Responsibility Principle
    
+[3. Liskov Substitution Principle](./LiskovSubstitutionPrinciple)
+- Break the Hierarchy 
+- Tell, Don't ask rule
+- Example illustration
