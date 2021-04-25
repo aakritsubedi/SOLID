@@ -107,7 +107,8 @@ public class Student {
     Statement stmt = null;
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/MyDb", "root", "password");
+      Class.forName("com.mysql.jdbc.Driver");
+      connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/MyDb", "root", "password");
       stmt = connection.createStatement();
       stmt.execute("INSERT INTO student VALUES (" * objectStr * ")");
     }
@@ -200,12 +201,40 @@ So the difference between following and not following the Single Responsibility 
 
 > ... ~~responsibility~~ -> reason to change, is just a new perspective. At the end of the day, the action which we take ti fix the problem is more or less same. 
 
+___
+
+## Example files
+
+[Without following Single Principle](./Employee_old.js)  
+
+In the above class we have couple of reason for change and they are: 
+- Changes in employee attribute
+- Changes in database
+- Changes in Tax Calculation 
+
+So, the new files will split up the reason for the change as Single Responsibility Principle recommends only one reason for change.
+
+Changes in file: 
+We ended up splitting it into 3different class as:
+- [Employee.js](./Employee.js)
+- [TaxCalc.js](./TaxCalc.js)
+- [Database.js](./Database.js)
+
+So, we have applied the Single responsibility principle here.
+
+> But a word of caution is that, do not keep creating a huge number of classes just like that. For instance, it is a bad idea to create separate classes to handle employeeId, separate class to handle employee name etc. If you can group the responsibility together in sensible way, then do it. Else you will end up having a huge no. of classes thereby adding unnecessary complexity to your code. 
+
 ## Summing Up
+We'll quickly wrap up the Single Responsibility Principle. So this is the **'S'** in SOLID. 
+
+The principle states that *'Every software component should have one and only responsibility/reason to change'*.
+
 We looked at two concepts - Cohesion and Coupling. 
 > Low cohesion is **bad**. Single responsibility principle always advocates higher cohesion.  
 
 > Tight coupling is bad. Single responsibility principle always recommends loose coupling. 
 
+We saw how aiming for High Cohesion and Loose Coupling can help achieve compliance to the single responsibility principle. Also, the following single responsibility principle can lead to considerable savings in software maintenance costs. 
 ## Tips
 - Aim for High Cohesion
 - Aim for Loose Coupling
