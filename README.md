@@ -41,3 +41,8 @@ SOLID stands for:
 
 [5. Dependency Inversion Principle](./DependencyInversionPrinciple)
 - High level and low level modules
+
+### SOLID Principles: Introducing Software Architecture & Design 
+> by Sujith George  
+
+![Certificate](./images/certification.jpg)
