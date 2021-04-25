@@ -22,4 +22,10 @@ SOLID stands for:
   - Coupling
   - Reason for change
   - Code example
+
+[2. Open Closed Principle](./OpenClosedPrinciple)
+  - Closed for modification
+  - Open for extensions
+  - Benefits in long run 
+  - Related to Single Responsibility Principle
    
