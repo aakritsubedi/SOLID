@@ -38,3 +38,6 @@ SOLID stands for:
   - Avoid blank implementation
   - Split to avoid less cohesion
   - Example illustration
+
+[5. Dependency Inversion Principle](./DependencyInversionPrinciple)
+- High level and low level modules
