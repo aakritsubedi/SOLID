@@ -33,3 +33,8 @@ SOLID stands for:
 - Break the Hierarchy 
 - Tell, Don't ask rule
 - Example illustration
+
+[4. Interface Segregation Principle](./InterfaceSegregationPrinciple)
+  - Avoid blank implementation
+  - Split to avoid less cohesion
+  - Example illustration
